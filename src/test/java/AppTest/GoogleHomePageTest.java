@@ -1,6 +1,5 @@
 package AppTest;
-
-
+//removed blank spaces
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
@@ -18,7 +17,7 @@ public class GoogleHomePageTest {
     @Steps
     GoogleHomePageSteps googleHomePageSteps;
 
-
+//add new commented line
 
     @Test
 
