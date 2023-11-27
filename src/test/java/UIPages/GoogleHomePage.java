@@ -15,5 +15,6 @@ public class GoogleHomePage extends PageObject {
         waitForTextToAppear(searchResult);
         clickOn($(By.xpath("//div[@aria-label='"+searchResult+"']")));
         return find(By.xpath("//h3[text()='net.serenity-bdd']")).getText();
+        //hatim updated some code latest
     }
 }
