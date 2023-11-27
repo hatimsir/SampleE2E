@@ -25,6 +25,7 @@ public class GoogleHomePageTest {
     public void test1() {
         googleHomePageSteps.openLoginPage();
         //john updates on Nov 27 - john wrote
+        //new john comment
     }
 
    /*@Test
