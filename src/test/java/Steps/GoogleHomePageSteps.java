@@ -1,21 +1,16 @@
 package Steps;
 
 import UIPages.GoogleHomePage;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.junit.runners.SerenityRunner;
-import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Step;
-import net.thucydides.core.annotations.Steps;
-import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
 
 
 public class GoogleHomePageSteps {
 
 
-    @Steps
+    //@Steps
     GoogleHomePage homepage;
     @Given("User navigate to google page")
     public void user_navigate_to_google_page() {
@@ -33,4 +28,7 @@ public class GoogleHomePageSteps {
     }
 
 
+    @And("User see the page")
+    public void userSeeThePage() {
+    }
 }
