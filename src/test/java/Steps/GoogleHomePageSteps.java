@@ -1,24 +1,36 @@
 package Steps;
 
 import UIPages.GoogleHomePage;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import net.serenitybdd.junit.runners.SerenityRunner;
+import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.annotations.Steps;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
+
 
 public class GoogleHomePageSteps {
 
-    private GoogleHomePage googlehomepage;
 
-    @Step
-    public void openLoginPage(){
-        googlehomepage.open();
+    @Steps
+    GoogleHomePage homepage;
+    @Given("User navigate to google page")
+    public void user_navigate_to_google_page() {
+        homepage.open();
     }
 
-    @Step
-    public void validateGoogleLogo(){
-        googlehomepage.isLogoDisplayed();
+    @When("User see google page is opened")
+    public void user_see_google_page_is_opened() {
+    homepage.isLogoDisplayed();
     }
 
-    @Step
-    public String performSearch(String searchKey, String searchResult){
-        return googlehomepage.doSearch(searchKey,searchResult);
+    @Then("User check text box and close the browser")
+    public void user_check_text_box_and_close_the_browser() {
+    homepage.doSearch("BDD CUCUMBER","BDD");
     }
+
+
 }
