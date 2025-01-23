@@ -1,0 +1,11 @@
+  public void theSectionShouldNotBePresentOnThePage(String sectionName) {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        String sectionXpath = String.format("//section[contains(text(), '%s')]", sectionName);
+        
+        try {
+            WebElement section = wait.until(ExpectedConditions.presenceOfElementLocated(xpath(sectionXpath)));
+            assertThat(section).isNull();
+        } catch (Exception e) {
+            // If the element is not found, it means the section is not present as expected
+        }
+    }
